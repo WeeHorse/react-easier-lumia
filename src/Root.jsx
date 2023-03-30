@@ -1,7 +1,7 @@
 import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
 import App from "./App.jsx";
-import About from "./Pages/About.jsx";
-import Shop from "./Pages/Shop.jsx";
+import About from "./pages/About.jsx";
+import Shop from "./pages/Shop.jsx";
 
 export default function () {
 
