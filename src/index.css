@@ -23,6 +23,12 @@ h1{
   text-transform: uppercase;
 }
 
+h2{
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
 #main{
   background: linear-gradient(orange,white);
   padding-bottom: 20px;
@@ -48,6 +54,18 @@ h1{
   margin:15px 0;
   font-family:Lobster;
   padding:3px;
+}
+
+#Navbar a{
+  margin-left: 10px;
+}
+
+#about{
+  margin:15px 0;
+}
+
+#about h2{
+  margin-bottom: 30px;
 }
 
 .product{
