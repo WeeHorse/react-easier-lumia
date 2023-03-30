@@ -1,11 +1,11 @@
-
+import {useStates} from 'react-easier'
 
 export default function Search(){
 
-    const search = () => {}
+    const s = useStates({search: ''});
 
     return (
-        <input type="text" id="search" placeholder="Type to search" onKeyUp={search()}/> 
+            <input type="text" id="search" placeholder="Type to search" {...s.bind('search')}/>
     )
 
 }
