@@ -27,7 +27,6 @@ export default function App() {
                 <Navbar/>
                 <Outlet/>
             </div>
-            <Cart/>
         </div>
     )
 }
