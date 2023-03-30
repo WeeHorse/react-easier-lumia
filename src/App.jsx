@@ -20,6 +20,10 @@ export default function App() {
         ]
     );
 
+    const cart = useStates('cart', {
+        total: 0
+    });
+
     return (
         <div id="root">
             <div id="main" className="corners padding transp">

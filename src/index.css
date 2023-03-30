@@ -123,6 +123,10 @@ button{
   justify-content: space-between;
 }
 
+#cart button:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 #cart li.total{
   border-top:1px dashed gray;
   padding-top:6px;
