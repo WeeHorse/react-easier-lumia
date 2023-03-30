@@ -56,8 +56,8 @@ h2{
   padding:3px;
 }
 
-#Navbar a{
-  margin-left: 10px;
+#Navbar a:not(:last-child) {
+  margin-right: 10px;
 }
 
 #about{
