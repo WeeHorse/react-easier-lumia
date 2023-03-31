@@ -4,14 +4,12 @@ import Cart from "./components/Cart.jsx";
 
 export default function App() {    
 
-    return (
-        <div id="root">
-            <div id="main" className="corners padding transp">
+    return <>
+            <main className="corners padding transp">
                 <h1>Lumia</h1>
                 <Navbar/>
                 <Outlet/> {/* sub routes from root */}
-            </div>
+            </main>
             <Cart/>
-        </div>
-    )
+        </>
 }

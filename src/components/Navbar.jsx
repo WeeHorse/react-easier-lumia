@@ -1,12 +1,9 @@
-import {useStates} from 'react-easier'
+import {NavLink} from 'react-router-dom'
 
 export default function () {
 
-    // const data = useStates('someData')
-
     return <nav id="Navbar">
-        <a href="/">Shop</a>
-        <a href="/about">About us</a>
-        {/* <span>{data[0].title}</span> */}
+        <NavLink to="/">Produkter</NavLink>
+        <NavLink to="/about">Om oss</NavLink>
     </nav>
 }

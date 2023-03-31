@@ -31,9 +31,9 @@ export default function () {
         },
         {
             name: "Lampett",
-            description: "Stor Lampett i tenn av Malin Appelgren. Mått Ø 29.",
+            description: "Fransar av Blondie. Mått Ø 29.",
             price: 4895,
-            image: "https://floralinnea.se/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/t/stortlampetttenn.jpg"
+            image: "https://02.cdn37.se/lWg/images/2.150514/regal-duo-vagglampett-massing-e27.jpeg"
         },
         {
             name: "Spotlight",

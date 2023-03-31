@@ -16,14 +16,14 @@ export default function Products(props) {
 
     return (
         filteredProducts().map((product) =>
-            <div className="product">
-                <div className="content">
+            <article className="product">
+                <section className="content">
                     <h2>{product.name}</h2>
                     <p>{product.description}</p>
                     <button onClick={(e) => add(e, product)}>Köp för <span>{product.price}</span> kr</button>
-                </div>
+                </section>
                 <img src={product.image}/>
-            </div>
+            </article>
         )
     )
 }
