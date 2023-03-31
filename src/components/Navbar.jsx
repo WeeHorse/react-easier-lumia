@@ -1,9 +1,8 @@
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
-export default function () {
-
-    return <nav id="Navbar">
-        <NavLink to="/">Produkter</NavLink>
-        <NavLink to="/about">Om oss</NavLink>
-    </nav>
+export default function Navbar() {
+  return <nav className="navbar">
+    <NavLink to="/">Shop</NavLink>
+    <NavLink to="/about">About us</NavLink>
+  </nav>
 }

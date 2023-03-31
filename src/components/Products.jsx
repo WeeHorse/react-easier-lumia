@@ -1,29 +1,29 @@
-import {useStates} from 'react-easier'
+import { useStates } from 'react-easier';
+import { svCurrency } from '../utils/svCurrency';
 
-export default function Products(props) {
-    const products = useStates('products')
-    const cart = useStates('cart')
+export default function Products() {
 
-    const add = (e, product) => {
-        cart.items.push(product)
-        cart.total = cart.total + product.price
-        console.log(`Product added: ${product.name} \nProduct price: ${product.price} \nNew total: ${cart.total}`)
-    }
+  const { products, cart, search } = useStates('main');
 
-    const filteredProducts = () => {
-        return products.filter(p => p.name.toLowerCase().includes(props.search.toLowerCase()) || p.description.toLowerCase().includes(props.search.toLowerCase()))
-    }
+  const add = (e, product) => {
+    cart.items.push(product);
+    cart.total = cart.total + product.price;
+  }
 
-    return (
-        filteredProducts().map((product) =>
-            <article className="product">
-                <section className="content">
-                    <h2>{product.name}</h2>
-                    <p>{product.description}</p>
-                    <button onClick={(e) => add(e, product)}>Köp för <span>{product.price}</span> kr</button>
-                </section>
-                <img src={product.image}/>
-            </article>
-        )
+  const filteredProducts = () => {
+    return products.filter(p => p.name.toLowerCase().includes(search.toLowerCase()) || p.description.toLowerCase().includes(search.toLowerCase()))
+  }
+
+  return (
+    filteredProducts().map((product) =>
+      <div className="product">
+        <div className="content">
+          <h2>{product.name}</h2>
+          <p>{product.description}</p>
+          <button onClick={(e) => add(e, product)}>Köp för {svCurrency(product.price)}</button>
+        </div>
+        <img src={product.image} />
+      </div>
     )
+  )
 }
