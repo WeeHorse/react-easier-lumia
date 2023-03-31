@@ -14,16 +14,14 @@ export default function Products() {
     return products.filter(p => p.name.toLowerCase().includes(search.toLowerCase()) || p.description.toLowerCase().includes(search.toLowerCase()))
   }
 
-  return (
-    filteredProducts().map((product) =>
-      <div className="product">
-        <div className="content">
-          <h2>{product.name}</h2>
-          <p>{product.description}</p>
-          <button onClick={(e) => add(e, product)}>Köp för {svCurrency(product.price)}</button>
-        </div>
-        <img src={product.image} />
+  return filteredProducts().map((product) =>
+    <div className="product">
+      <div className="content">
+        <h2>{product.name}</h2>
+        <p>{product.description}</p>
+        <button onClick={(e) => add(e, product)}>Köp för {svCurrency(product.price)}</button>
       </div>
-    )
-  )
+      <img src={product.image} />
+    </div>
+  );
 }
