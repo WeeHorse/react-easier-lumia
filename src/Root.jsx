@@ -1,11 +1,14 @@
 import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
-import {useStates} from 'react-easier'
+import {useStates, useFetch, useAutoKeys} from 'react-easier'
 
 import App from "./App.jsx";
 import About from "./pages/About.jsx";
 import Shop from "./pages/Shop.jsx";
 
 export default function () {
+    useAutoKeys()
+
+    // const fetched = useStates('someData', useFetch('https://jsonplaceholder.typicode.com/todos'))
 
     const states = useStates('products', [
         {

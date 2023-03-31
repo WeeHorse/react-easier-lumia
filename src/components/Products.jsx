@@ -1,7 +1,6 @@
-import {useStates, useAutoKeys} from 'react-easier'
+import {useStates} from 'react-easier'
 
 export default function Products(props) {
-    useAutoKeys()
     const products = useStates('products')
     const cart = useStates('cart')
 
