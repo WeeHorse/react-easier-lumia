@@ -8,11 +8,11 @@ export default function Products() {
   const add = (e, product) => {
     cart.items.push(product);
     cart.total = cart.total + product.price;
-  }
+  };
 
   const filteredProducts = () => {
     return products.filter(p => p.name.toLowerCase().includes(search.toLowerCase()) || p.description.toLowerCase().includes(search.toLowerCase()))
-  }
+  };
 
   return filteredProducts().map((product) =>
     <div className="product">
