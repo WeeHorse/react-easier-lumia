@@ -20,7 +20,7 @@ export default function Products() {
       <div className="content">
         <h2>{product.name}</h2>
         <p>{product.description}</p>
-        <button onClick={(e) => add(product)}>Köp för {svCurrency(product.price)}</button>
+        <button onClick={() => add(product)}>Köp för {svCurrency(product.price)}</button>
       </div>
       <img src={product.image} />
     </div>
