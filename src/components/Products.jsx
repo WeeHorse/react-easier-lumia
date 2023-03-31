@@ -12,7 +12,7 @@ export default function Products(props) {
     }
 
     const filteredProducts = () => {
-        return products.filter(p => p.name.includes(props.search))
+        return products.filter(p => p.name.toLowerCase().includes(props.search.toLowerCase()) || p.description.toLowerCase().includes(props.search.toLowerCase()))
     }
 
     return (

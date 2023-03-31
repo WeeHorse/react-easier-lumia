@@ -1,24 +1,25 @@
 import {useStates, Outlet} from 'react-easier'
 import Navbar from "./components/Navbar.jsx";
+import Cart from "./components/Cart.jsx";
 
 export default function App() {
 
     const states = useStates('products', [
             {
                 name: "Taklampa",
-                description: "Mått Ø 25 cm, höjd 20 cm.",
+                description: "Fluffig! Är det en snöboll eller en maräng? Mått Ø 25 cm, höjd 20 cm.",
                 price: 2500,
                 image: "https://d2lhb5rbruih0q.cloudfront.net/eyJ2IjoxMDIsInQiOiJwcm9kdWN0IiwibiI6IjEyMzEwMS5qcGcifQ==/34537.jpg?q=85&w=670&h=447&dpr=2"
             },
             {
                 name: "Bordslampa",
-                description: "Mått Ø 55 cm, höjd 30 cm.",
+                description: "Lyser uppåt, nedåt, bakåt, framåt och sidåt. Mått Ø 55 cm, höjd 30 cm.",
                 price: 6900,
                 image: "https://d2lhb5rbruih0q.cloudfront.net/eyJ2IjoxMDIsInQiOiJwcm9kdWN0IiwibiI6IjUyMzI0Ni5qcGcifQ==/107942.jpg?q=85&w=670&h=447&dpr=2"
             },
             {
                 name: "Golvlampa",
-                description: "Mått Ø 25 cm, höjd 130 cm.",
+                description: "För dig som har högt till tak. Mått Ø 25 cm, höjd 230 cm.",
                 price: 2500,
                 image: "https://d2lhb5rbruih0q.cloudfront.net/eyJ2IjoxMTMsInQiOiJwcm9kdWN0IiwibiI6IjEwNTQ2Ni5qcGcifQ==/5778.jpg?q=85&w=670&h=447&dpr=2"
             },
@@ -49,6 +50,7 @@ export default function App() {
                 <Navbar/>
                 <Outlet/>
             </div>
+            <Cart/>
         </div>
     )
 }

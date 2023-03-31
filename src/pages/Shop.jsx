@@ -1,6 +1,5 @@
 import {useStates} from 'react-easier'
 import Products from "../components/Products.jsx";
-import Cart from "../components/Cart.jsx";
 
 export default function () {
 
@@ -8,7 +7,6 @@ export default function () {
 
     return <>
         <input type="text" id="search" placeholder="Type to search" {...search.bind('text')} />
-        <Products search={search.text}/>
-        <Cart/>
+        <Products search={search.text}/>        
     </>
 }
