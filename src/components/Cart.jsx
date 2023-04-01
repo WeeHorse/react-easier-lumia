@@ -16,14 +16,16 @@ export default function Cart() {
       <li className="total">Totalt (ex. moms)<span>{svCurrency(cart.total * 0.8)}</span></li>
     </ul>
     <div className="buttonHolder">
-      <button
-        onClick={() => cart.empty()}>
-        Töm varukorgen
-      </button><br />
-      {!cart.rows.length ? null : <button
-        onClick={() => alert('Nej, du har inte råd med det här!')}>
-        Gå till kassan
-      </button>}
+      {!cart.rows.length ? null : <>
+        <button
+          onClick={() => cart.empty()}>
+          Töm varukorgen
+        </button><br />
+        <button
+          onClick={() => alert('Nej, du har inte råd med det här!')}>
+          Gå till kassan
+        </button>
+      </>}
     </div>
   </aside>;
 }
