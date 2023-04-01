@@ -14,7 +14,9 @@ export default function App() {
   useDebug();
 
   const s = useStates('main', {
-    products: useFetch('/products.json'),
+    products: useFetch('/products.json', {
+      postProcess: x => x.filter(p => p.name !== 'Lampett')
+    }),
     search: '',
     cart: {
       items: [],
