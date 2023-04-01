@@ -9,7 +9,7 @@ export default function Cart() {
     <h3>Varukorg</h3>
     <ul>
       {cart.rows.map(({ quantity, item }) => <li>
-        {item.name}, {quantity} st<span>
+        {item.name},&nbsp;{quantity}&nbsp;st<span>
           {svCurrency(item.price * quantity)}</span>
       </li>)}
       <li className="total">Totalt <span>{svCurrency(cart.total)}</span></li>
