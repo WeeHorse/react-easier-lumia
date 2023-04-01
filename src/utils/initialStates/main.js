@@ -11,8 +11,7 @@ export const mainInitialState = () => ({
     add(product) {
       let entry = this.rows.find(x => x.item.id === product.id)
         || { item: product, quantity: 0 };
-      entry.quantity || this.rows.push(entry);
-      entry.quantity++;
+      entry.quantity++ || this.rows.push(entry);
       this.total += product.price;
     },
     empty() {
