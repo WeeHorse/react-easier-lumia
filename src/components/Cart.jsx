@@ -22,7 +22,10 @@ export default function Cart() {
           Töm varukorgen
         </button><br />
         <button
-          onClick={() => alert('Nej, du har inte råd med det här!')}>
+          onClick={() => alert(`
+            Nej, du har inte råd med det här!
+            Det är ju ${Math.round(cart.total / 25)} falafflar!
+          `)}>
           Gå till kassan
         </button>
       </>}
