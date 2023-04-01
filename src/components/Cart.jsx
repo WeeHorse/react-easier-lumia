@@ -3,7 +3,7 @@ import { svCurrency } from '../utils/svCurrency';
 
 export default function Cart() {
 
-  const { cart } = useStates('main');
+  const { cart } = useStates('store');
 
   return <aside id="cart" className="corners padding transp">
     <h3>Varukorg</h3>

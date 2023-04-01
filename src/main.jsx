@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.jsx";
-import About from "./pages/About.jsx";
-import Shop from "./pages/Shop.jsx";
+import App from "./App";
+import About from "./pages/About";
+import Shop from "./pages/Shop";
 import './index.css';
 
 export const menuPaths = [

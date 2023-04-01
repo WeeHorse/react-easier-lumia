@@ -3,7 +3,7 @@ import { svCurrency } from '../utils/svCurrency';
 
 export default function Products() {
 
-  const { products, cart, search } = useStates('main');
+  const { products, cart, search } = useStates('store');
 
   return products
     .filter(p => new RegExp(search, 'i').test(p.name + p.description))

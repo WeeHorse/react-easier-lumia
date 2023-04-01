@@ -4,16 +4,16 @@ import {
   useStates
 } from "react-easier";
 import { Outlet } from 'react-router-dom';
-import Navbar from "./components/Navbar.jsx";
-import Cart from "./components/Cart.jsx";
-import { mainInitialState } from "./initialStates/main.js";
+import Navbar from "./components/Navbar";
+import Cart from "./components/Cart";
+import { storeInitialState } from "./initialStates/store";
 
 export default function App() {
 
   useAutoKeys();
   useDebug();
 
-  const s = useStates('main', mainInitialState());
+  const s = useStates('store', storeInitialState());
 
   return !s.products.length ? null : <>
     <main className="corners padding transp">
