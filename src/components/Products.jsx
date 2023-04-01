@@ -10,12 +10,10 @@ export default function Products() {
     cart.total = cart.total + product.price;
   };
 
-  const filteredProducts = () => {
-    return products.filter(p => p.name.toLowerCase().includes(search.toLowerCase())
-      || p.description.toLowerCase().includes(search.toLowerCase()))
-  };
-
-  return filteredProducts().map((product) =>
+  return products.filter(
+    p => p.name.toLowerCase().includes(search.toLowerCase())
+      || p.description.toLowerCase().includes(search.toLowerCase())
+  ).map((product) =>
     <div className="product">
       <div className="content">
         <h2>{product.name}</h2>
