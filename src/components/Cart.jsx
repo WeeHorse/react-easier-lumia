@@ -24,7 +24,7 @@ export default function Cart() {
         <button
           onClick={() => alert(`
             Nej, du har inte råd med det här!
-            Det är ju ${Math.round(cart.total / 25)} falafflar!
+            Det är ju ${Math.floor(cart.total / 25)} falafflar!
           `)}>
           Gå till kassan
         </button>
