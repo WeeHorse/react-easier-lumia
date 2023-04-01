@@ -50,6 +50,8 @@ main {
   margin-left: 5vw;
   color: white;
   float: left;
+  position: sticky;
+  top: 20px;
 }
 
 input[name="search"] {
