@@ -6,7 +6,7 @@ import {
 import { Outlet } from 'react-router-dom';
 import Navbar from "./components/Navbar.jsx";
 import Cart from "./components/Cart.jsx";
-import { mainInitialState } from "./utils/initialStates/main.js";
+import { mainInitialState } from "./initialStates/main.js";
 
 export default function App() {
 
