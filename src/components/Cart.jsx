@@ -25,6 +25,7 @@ export default function Cart() {
           onClick={() => alert(`
             Nej, du har inte råd med det här!
             Det är ju ${Math.floor(cart.total / 25)} falafflar!
+            (Malmö/Lund cheapest-index 2023)
           `)}>
           Gå till kassan
         </button>
