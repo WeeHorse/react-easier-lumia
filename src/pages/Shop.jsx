@@ -6,7 +6,7 @@ export default function Shop() {
   const s = useStates('main');
 
   return <>
-    <input placeholder="Type to search"  {...s.bind('search')} />
+    <input placeholder="Sök / Filtrera"  {...s.bind('search')} />
     < Products />
   </>;
 }

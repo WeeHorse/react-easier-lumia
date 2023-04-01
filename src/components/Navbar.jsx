@@ -1,8 +1,9 @@
 import { NavLink } from 'react-router-dom';
+import { menuPaths } from '../main';
 
 export default function Navbar() {
   return <nav className="navbar">
-    <NavLink to="/">Shop</NavLink>
-    <NavLink to="/about">About us</NavLink>
+    {menuPaths.map(({ path, label }) =>
+      <NavLink to={path}>{label}</NavLink>)}
   </nav>
 }

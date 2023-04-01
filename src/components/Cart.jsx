@@ -8,8 +8,12 @@ export default function Cart() {
   return <aside id="cart" className="corners padding transp">
     <h3>Varukorg</h3>
     <ul>
-      {cart.items.map(item => <li>{item.name}<span>{svCurrency(item.price)}</span></li>)}
-      <li className="total">Total <span>{svCurrency(cart.total)}</span></li>
+      {cart.rows.map(({ quantity, item }) => <li>
+        {item.name}, {quantity} st<span>
+          {svCurrency(item.price * quantity)}</span>
+      </li>)}
+      <li className="total">Totalt <span>{svCurrency(cart.total)}</span></li>
+      <li className="total">Totalt (ex. moms)<span>{svCurrency(cart.total * 0.8)}</span></li>
     </ul>
     <div className="buttonHolder">
       <button onClick={() => cart.empty()}>Töm varukorgen</button><br />

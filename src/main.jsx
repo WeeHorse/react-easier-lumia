@@ -6,15 +6,13 @@ import About from "./pages/About.jsx";
 import Shop from "./pages/Shop.jsx";
 import './index.css';
 
+export const menuPaths = [
+  { path: "/", label: 'Shop', element: <Shop /> },
+  { path: "/om-oss", label: 'Om oss', element: <About /> }
+];
 
 const router = createBrowserRouter([
-  {
-    path: "/", element: <App />,
-    children: [
-      { path: "/", element: <Shop /> },
-      { path: "/about", element: <About /> }
-    ],
-  },
+  { path: "/", element: <App />, children: menuPaths }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

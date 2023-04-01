@@ -2,18 +2,21 @@ import { useFetch } from 'react-easier';
 
 export const mainInitialState = () => ({
   products: useFetch('/products.json', {
-    postProcess: x => x.filter(p => p.name !== 'Lampett')
+    postProcess: x => x.data
   }),
   search: '',
   cart: {
-    items: [],
+    rows: [],
     total: 0,
     add(product) {
-      this.items.push(product);
+      let entry = this.rows.find(x => x.item.id === product.id)
+        || { item: product, quantity: 0 };
+      entry.quantity || this.rows.push(entry);
+      entry.quantity++;
       this.total = this.total + product.price;
     },
     empty() {
-      this.items = [];
+      this.rows = [];
       this.total = 0;
     }
   }
