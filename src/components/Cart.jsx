@@ -17,7 +17,7 @@ export default function Cart() {
     </ul>
     <div className="buttonHolder">
       <button onClick={() => cart.empty()}>Töm varukorgen</button><br />
-      <button>Gå till kassan</button>
+      <button onClick={() => alert('Nej, du har inte råd med det här!')}>Gå till kassan</button>
     </div>
   </aside>;
 
