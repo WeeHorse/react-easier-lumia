@@ -5,11 +5,6 @@ export default function Cart() {
 
   const { cart } = useStates('main');
 
-  const emptyCart = () => {
-    cart.items = [];
-    cart.total = 0;
-  };
-
   return <aside id="cart" className="corners padding transp">
     <h3>Varukorg</h3>
     <ul>
@@ -17,7 +12,7 @@ export default function Cart() {
       <li className="total">Total <span>{svCurrency(cart.total)}</span></li>
     </ul>
     <div className="buttonHolder">
-      <button onClick={emptyCart}>Töm varukorgen</button><br />
+      <button onClick={() => cart.empty()}>Töm varukorgen</button><br />
       <button>Gå till kassan</button>
     </div>
   </aside>;
