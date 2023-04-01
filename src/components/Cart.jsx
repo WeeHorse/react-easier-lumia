@@ -26,5 +26,4 @@ export default function Cart() {
       </button>}
     </div>
   </aside>;
-
 }
