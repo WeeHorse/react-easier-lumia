@@ -13,7 +13,7 @@ export const mainInitialState = () => ({
         || { item: product, quantity: 0 };
       entry.quantity || this.rows.push(entry);
       entry.quantity++;
-      this.total = this.total + product.price;
+      this.total += product.price;
     },
     empty() {
       this.rows = [];
