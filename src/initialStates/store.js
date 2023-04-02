@@ -1,9 +1,3 @@
-// NOTE: 
-// this file doesn't have to be .jsx, since there is
-// no jsx content in it, but setting the extension to .jsx
-// makes it possible for react-easier to give more precise
-// line-numbers in its debug log!
-
 import { useFetch } from 'react-easier';
 
 export const storeInitialState = () => ({
