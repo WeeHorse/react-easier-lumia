@@ -14,7 +14,7 @@ export default function Products(props) {
         return products.filter(p => p.name.toLowerCase().includes(props.search.toLowerCase()) || p.description.toLowerCase().includes(props.search.toLowerCase()))
     }
 
-    return (
+    return ( 
         filteredProducts().map((product) =>
             <article className="product">
                 <section className="content">
