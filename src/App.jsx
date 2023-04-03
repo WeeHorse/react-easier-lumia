@@ -15,12 +15,12 @@ export default function App() {
 
   const s = useStates('store', storeInitialState());
 
-  return !s.products.length ? null : <>
-    <main className="corners padding transp">
+  return <>
+    <main className="corners padding transp" >
       <h1>Lumia</h1>
       <Navbar />
       <Outlet />
-    </main>
+    </main >
     <Cart />
   </>;
 }

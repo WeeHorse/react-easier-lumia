@@ -5,7 +5,7 @@ export default function Products() {
 
   const { products, cart, search } = useStates('store');
 
-  return products
+  return !products.length ? null : products
     .filter(p => new RegExp(search, 'i').test(p.name + p.description))
     .map((product) =>
       <div className="product">
