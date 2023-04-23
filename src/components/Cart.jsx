@@ -17,7 +17,7 @@ export default function Cart(){
         <li className="total">Total <span>{cart.total}</span></li>
         </ul>
         <button onClick={emptyCart}>Töm varukorgen</button>        
-        <button><NavLink to="/kassa">Gå till kassan</NavLink></button>
+        <button><NavLink to="/checkout">Gå till kassan</NavLink></button>
     </aside>
 
 }

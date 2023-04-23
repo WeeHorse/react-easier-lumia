@@ -153,3 +153,8 @@ button{
 .transp{
   opacity: 0.9;
 }
+
+#checkout{
+  display: flex;
+  flex-direction: column;
+}

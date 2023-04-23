@@ -1,0 +1,22 @@
+{
+    "email": "example@example.com",
+    "password": "supersecretpassword",
+    "street_address": "123 Main St",
+    "city": "Anytown",
+    "zip": "12345",
+    "states": [
+    {
+        "value": "CA",
+        "text": "California"
+    },
+    {
+        "value": "TX",
+        "text": "Texas"
+    },
+    {
+        "value": "NY",
+        "text": "New York"
+    }
+    // Add more state objects as needed
+    ]
+}
