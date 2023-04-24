@@ -7,9 +7,10 @@ export default function () {
         "email": "example@example.com",
         "password": "supersecretpassword",
         "street_address": "123 Main St",
-        "city": "Anytown",
-        "zip": "12345",
-        "states": [
+        "states": [ 
+            {
+                
+            },
             {
                 "value": "AL",
                 "text": "Alabama"
@@ -39,11 +40,14 @@ export default function () {
         // useFetch('/user-data.json')
     );
 
-    const watchFormState = () => {
-        console.log('called')
+    const watchFormState = (e) => {
+        console.log('called', e.target)
+        console.log(checkoutForm[e.target.name])
     }
 
     const submitCheckout = async (e)=>{
+        console.log('called', e.target)
+        console.log(checkoutForm)
         e.preventDefault()
         await fetch('/',{
             method: 'post',
@@ -73,10 +77,10 @@ export default function () {
         </select>
 
         <label htmlFor="city">City</label>
-        <input type="text" name="city" {...checkoutForm.bind('city')} />
+        <input type="text" name="city" />
 
         <label htmlFor="zip">Zip</label>
-        <input type="text" name="zip" {...checkoutForm.bind('zip')} />
+        <input type="text" name="zip" value={checkoutForm.zip} onChange={e=>checkoutForm.zip=e.target.value} />
         
         <button type="submit">Send</button>
     </form>

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from "./App.jsx";
 import About from "./pages/About.jsx";
 import Shop from "./pages/Shop.jsx";
-import Checkout from "./pages/Checkout.jsx";
+import Checkout from "./pages/Checkout-router.jsx";
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
